@@ -16,6 +16,7 @@
 
 body {
     font-family: 'Work Sans', sans-serif;
+    scroll-behavior: smooth ;
 }
 
 .container {
@@ -104,12 +105,18 @@ header .links .burger-icon {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
+    cursor: pointer;
 }
 
 header .links .burger-icon span {
     background-color: #333;
     margin-bottom: 5px;
     height: 2px;
+    transition: 1s all;
+    -webkit-transition: 1s all;
+    -moz-transition: 1s all;
+    -ms-transition: 1s all;
+    -o-transition: 1s all;
 }
 
 header .links .burger-icon span:first-child {
@@ -118,7 +125,11 @@ header .links .burger-icon span:first-child {
 
 header .links .burger-icon span:nth-child(2) {
     width: 60%;
-    transition: var(--main-duration);
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+    -o-transition: 0.5s all;
 }
 
 header .links .burger-icon span:last-child {
@@ -134,8 +145,13 @@ header .links ul {
     right: 0;
     min-width: 200px;
     top: calc(100% + 15px);
-    display: none;
     z-index: 1;
+    transition: 1s all;
+    -webkit-transition: 1s all;
+    -moz-transition: 1s all;
+    -ms-transition: 1s all;
+    -o-transition: 1s all;
+    opacity: 0;
 }
 
 header .links ul::before {
@@ -148,9 +164,6 @@ header .links ul::before {
     top: -20px;
 }
 
-header .links:hover ul {
-    display: block;
-}
 header .links:hover .burger-icon span:nth-child(2){
     width: 100%;
 }
